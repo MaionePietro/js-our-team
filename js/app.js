@@ -1,6 +1,6 @@
-
+const inpiegati = {}
 const team =[
-    collaborator,
+    inpiegati,
     {
         firstName: 'Wayne',
 		lastName: 'Barnett',
@@ -38,3 +38,26 @@ const team =[
         img: 'barbara-ramos-graphic-designer.jpg',
     },
 ]
+
+
+for (let chiave in team) {
+	console.log(team[chiave]) //persona['age']
+}
+
+const mainElement = document.querySelector('.mainElement')
+
+for (let i = 1; i < team.length ; i++) {
+    const impiegatoCorrente = team[i]
+    const firstName = impiegatoCorrente.firstName
+    const lastName = impiegatoCorrente.lastName
+    const employment = impiegatoCorrente.employment
+    const img = impiegatoCorrente.img
+    let divString = `<div class="card border-0 rounded-0 m-3 text-center" style="width: 18rem;">
+                        <img src="./img/${img}" class="" alt="...">
+                        <div class="card-body">
+                            <h5 class="">${firstName} ${lastName}</h5>
+                            <p class="">${employment}</p>
+                        </div>
+                    </div>`;
+    mainElement.innerHTML += divString;
+}
