@@ -1,6 +1,4 @@
-const inpiegati = {}
 const team =[
-    inpiegati,
     {
         firstName: 'Wayne',
 		lastName: 'Barnett',
@@ -52,7 +50,7 @@ for (let i = 1; i < team.length ; i++) {
     const lastName = impiegatoCorrente.lastName
     const employment = impiegatoCorrente.employment
     const img = impiegatoCorrente.img
-    let divString = `<div class="card border-0 rounded-0 m-3 text-center" style="width: 18rem;">
+    let divString = `<div class="card border-0 rounded-0 m-3 text-center col" style="width: 18rem;">
                         <img src="./img/${img}" class="" alt="...">
                         <div class="card-body">
                             <h5 class="">${firstName} ${lastName}</h5>
